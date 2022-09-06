@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress Bar</title>
+  </head>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css" />
+  <scr
+  <body>
+    <div class="prog-bar">
+      <span></span>
+    </div>
+
+    <div class="prog-bar red">
+      <span></span>
+    </div>
+
+    <div class="prog-bar white nostripes">
+      <span></span>
+    </div>
+
+    <div class="prog-bar blue">
+      <span></span>
+    </div>
+
+    <div class="prog-bar orange">
+      <span></span>
+    </div>
+
+    <button id="finishBtn" class="finishBtn">
+      Finish
+    </button>
+    <script>
+        $( document ).ready(function() {
+            let loadingBar = 50;
+
+            $('.prog-bar span').css("width", `${loadingBar}%`);
+
+            $('.finishBtn').click(function() {
+                var trigger = setInterval(finishLoading, 10);
+
+                function finishLoading() {
+                    if (loadingBar >= 100) {
+                        clearInterval(trigger);
+                        i = 0;
+                    } else {
+                        loadingBar++;
+                        $('.prog-bar span').css("width", `${loadingBar}%`);
+                    }
+                }
+            });
+        });
+
+        
+    </script>
+  </body>
+</html>
