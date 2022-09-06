@@ -90,24 +90,29 @@ pre {
   }
 }
 
-.orange > span {
-  background-image: linear-gradient(#f1a165, #f36d0a);
+.green > span {
+  background-image: linear-gradient(#adff2f, #008000);
+  color: #000;
 }
 
 .red > span {
   background-image: linear-gradient(#f0a3a3, #f42323);
+  color: #000;
 }
 
 .white > span {
   background-image: linear-gradient(#fff, #f9f9f9);
+  color: #808080;
 }
 
 .blue > span {
   background-image: linear-gradient(#89cff0, #0096ff);
+  color: #000;
 }
 
 .yellow > span {
   background-image: linear-gradient(#fcf55f, #fdda0d);
+  color: #000;
 }
 
 .nostripes > span > span,
@@ -154,4 +159,12 @@ pre {
   margin: 0;
   opacity: 1;
   transition: 0s;
+}
+
+span {
+  padding-top: 5px;
+  padding-right: 20px;
+  text-align: end;
+  font-size: 16px;
+  font-weight: bold;
 }
